@@ -14,7 +14,7 @@ pipeline {
                 sh 'echo This build machine or docker container needs Kubectl, Kops, and aws cli installed.'
                 sh 'echo This build machine has to have ssh keys generated using ssh-keygen -t rsa .'
                 sh 'echo building...'
-                git url: 'https://github.com/dancurrotto/dotnet-core-simple.git'
+                git url: 'https://github.com/dancurrotto/kops-flow'
             }
         }
         stage('Deploy') {
@@ -26,7 +26,7 @@ pipeline {
                 sh 'echo $PATH'            
                 
                 
-                sh '/var/lib/jenkins/workspace/kops-flow/manageClusterWithKops.sh $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY'
+                sh './manageClusterWithKops.sh $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY'
                
                              
 
