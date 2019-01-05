@@ -37,7 +37,7 @@ RETURN_VALUE=$?
 if [ $RETURN_VALUE -eq 1 ]
 then    
     echo "creating the cluster..."
-elif
+else
     echo "updating the cluster..."
 fi
 
