@@ -26,7 +26,7 @@ pipeline {
                 sh 'echo $PATH'            
                 
                 
-                sh './manageClusterWithKops.sh $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY'
+                sh '/var/lib/jenkins/workspace/kops-flow/manageClusterWithKops.sh $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY'
                
                              
 
