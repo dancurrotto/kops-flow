@@ -36,5 +36,5 @@ RETURN_VALUE=$?
 
 echo $RETURN_VALUE
 
-RETURN 0
+return 0
                 
