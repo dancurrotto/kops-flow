@@ -34,6 +34,13 @@ ValidateCluster
 
 RETURN_VALUE=$? 
 
+if [ $RETURN_VALUE -eq 1 ]
+then    
+    echo "creating the cluster..."
+elif
+    echo "updating the cluster..."
+fi
+
 echo $RETURN_VALUE
 
 return 0
