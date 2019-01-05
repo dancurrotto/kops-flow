@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 echo "Managing clusters with Kops"
 
 # Define variables
