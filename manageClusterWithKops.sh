@@ -8,7 +8,7 @@ REGION="us-east-2"
 OUTPUT="json"
 
 
-function Validate-Cluster()
+ValidateCluster()
 {
     kops validate cluster --name value-source-cloud.com --state s3://valuesource-kubernetes
 }
@@ -30,7 +30,7 @@ aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
 aws configure set region $REGION
 aws configure set output $OUTPUT
 
-Validate-Cluster
+ValidateCluster
 RETURN_VALUE = $? 
 
 echo $RETURN_VALUE
