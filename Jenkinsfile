@@ -28,7 +28,7 @@ pipeline {
                 
                 sh './manageClusterWithKops.sh $AWS_ACCESS_KEY_ID $AWS_SECRET_ACCESS_KEY'
                
-                             
+                sh 'echo Continuing...'             
 
                 // This is the statement that created the cluster.
                 // sh 'kops create cluster $NAME --zones us-east-2a --node-count 1 --node-size m4.large --kubernetes-version v1.6.6 --master-size m4.large --dry-run -o yaml > $NAME.yaml'
