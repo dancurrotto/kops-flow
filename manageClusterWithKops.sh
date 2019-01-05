@@ -31,7 +31,8 @@ aws configure set region $REGION
 aws configure set output $OUTPUT
 
 ValidateCluster
-RETURN_VALUE = $? 
+
+RETURN_VALUE=$? 
 
 echo $RETURN_VALUE
 
